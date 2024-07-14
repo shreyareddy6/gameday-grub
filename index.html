@@ -1,30 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GameGrub</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css"> 
-
-<body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
     <!-- Header -->
-    <header>
-        <h1>Gameday grub</h1>
+    <!-- bg-gradient-to says direction of the color -->
+    <header
+      class="bg-gradient-to-t from-red-800 to-red-600 text-white p-6 shadow-lg fixed top-0 w-full z-10"
+    >
+      <!-- Applies max width to container and keeps the content centered horizontally in parent element -->
+      <div class="container mx-auto flex justify-center items-center">
+        <h1 class="text-2x1 font-bold text-center">Gameday grub</h1>
+      </div>
     </header>
+
     <!-- Background splash -->
-    <section>
-        <p>image</p>
-    </section>
-    <!-- Sports Categories -->
-    <section>
-    </section>
+    <div
+      class="flex-shrink-0 background-splash bg-cover bg-center bg-fixed shadow-lg"
+    ></div>
+    <main class="container mx-auto justify-center">
+      <!-- Sports Categories -->
+      <div
+        class="category-cards flex flex-wrap space-x-4 space-y-4 justify-center"
+      >
+        <!-- card-1 -->
+        <div class="sport-card basis-1/4 shadow-lg">
+          <div class="img flex flex-col justify-center">
+            <img
+              src="https://www.api-football.com/public/img/news/min-football.png"
+              alt="football"
+            />
+            <a href="">
+              <h3>Football</h3>
+            </a>
+          </div>
+        </div>
+        <!-- card-2 -->
+        <div class="sport-card basis-1/4 shadow-lg">
+          <div class="img flex flex-col justify-center">
+            <img
+              src="https://www.api-football.com/public/img/news/min-nba.png"
+              alt="nba"
+            />
+            <a href="">
+              <h3>NBA</h3>
+            </a>
+          </div>
+        </div>
+        <!-- card-3 -->
+        <div class="sport-card basis-1/4 shadow-lg">
+          <div class="img flex flex-col justify-center space-x-4">
+            <img
+              src="https://www.api-football.com/public/img/news/min-baseball.png"
+              alt="baseball"
+            />
+            <a href="">
+              <h3>Baseball</h3>
+            </a>
+          </div>
+        </div>
+        <!-- card-4 -->
+        <div class="sport-card basis-1/4 shadow-lg">
+          <div class="img flex flex-col justify-center">
+            <img
+              src="https://www.api-football.com/public/img/news/min-football.png"
+              alt="football"
+            />
+            <a href="">
+              <h3>Football</h3>
+            </a>
+          </div>
+        </div>
+        <!-- card-5 -->
+        <div class="sport-card basis-1/4 shadow-lg">
+          <div class="img flex flex-col justify-center">
+            <img
+              src="https://www.api-football.com/public/img/news/min-nba.png"
+              alt="nba"
+            />
+            <a href="">
+              <h3>Football</h3>
+            </a>
+          </div>
+        </div>
+        <!-- card-6 -->
+        <div class="sport-card basis-1/4 shadow-lg">
+          <div class="img flex flex-col justify-center">
+            <img
+              src="https://www.api-football.com/public/img/news/min-hockey.png"
+              alt="hockey"
+            />
+            <a href="">
+              <h3>Hockey</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- footer -->
-<footer></footer>
-</body>
-<script
-  src="https://code.jquery.com/jquery-3.7.1.js"
-  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-  crossorigin="anonymous"></script>
+    <footer class="footer py-4 bg-gray-800 text-white">
+      <div class="text-center">
+        <p>Eat, Cheer, Repeat</p>
+      </div>
+    </footer>
+    <!-- Flowbite js -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
 </html>
