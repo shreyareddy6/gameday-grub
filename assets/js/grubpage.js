@@ -77,19 +77,6 @@ var lat = 34.0658;
 var lng = -118.2388;
 let map;
 
-async function initMap() {
-    const { Map, InfoWindow } = await google.maps.importLibrary("maps");
-    //let center = new google.map.LatLng(lat, lng);
-
-    map = new Map(document.getElementById('map'), {
-        zoom: 5,
-        center: {"lat":lat,"lng":lng},
-        mapTypeId: 'roadmap',
-    });
-    nearbySearch()
-
-}
-
 //var center = new google.maps.LatLng(-30.2965590, 153.1152650);
 async function nearbySearch() {
     const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary(
@@ -117,5 +104,5 @@ async function nearbySearch() {
       console.log(places);
     }
     
-    initMap();
+    nearbySearch();
     
