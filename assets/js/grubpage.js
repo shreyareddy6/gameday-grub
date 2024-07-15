@@ -80,17 +80,6 @@ var lat = 34.0658;
 var lng = -118.2388;
 let map;
 
-async function initMap() {
-    //let center = new google.map.LatLng(lat, lng);
-
-    map = new Map(document.getElementById('map'), {
-        zoom: 5,
-        center: {"lat":lat,"lng":lng},
-        mapTypeId: 'roadmap',
-    });
-    nearbySearch()
-
-}
 
 //var center = new google.maps.LatLng(-30.2965590, 153.1152650);
 async function nearbySearch() {
@@ -98,7 +87,6 @@ async function nearbySearch() {
         "places",
       );
       
-      // Restrict within the map viewport.
       let center = new google.maps.LatLng(lat, lng);
       const request = {
         // required parameters
@@ -107,7 +95,7 @@ async function nearbySearch() {
           center: center,
           radius: 500,
         },
-        // optional parameters
+        // Display types and amount
         includedPrimaryTypes: ["restaurant"],
         maxResultCount: 6,
         rankPreference: SearchNearbyRankPreference.POPULARITY,
@@ -119,5 +107,5 @@ async function nearbySearch() {
       console.log(places);
     }
     
-    initMap();
+    nearbySearch();
     
