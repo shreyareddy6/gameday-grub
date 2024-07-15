@@ -3,7 +3,10 @@ const apiKey = 'yGPLSRwLKzHAgAdFANWvvUHIwVbZm8o3'
 const teamName = 'Dodgers' // needs to be feed input from modal
 const gameDate = '2024-07-19' // needs jquery datepicker input from modal
 const eventContainerEL = document.getElementById('event-container');
-const ticketmasterUrl = `https://app.ticketmaster.com/discovery/v2/events?apikey=${apiKey}&keyword=${teamName}&localStartDateTime=${gameDate}T00:00:00,${gameDate}T23:59:59&`
+const proxyUrl = "https://floating-headland-95050.herokuapp.com/";
+const url = `https://app.ticketmaster.com/discovery/v2/events?apikey=${apiKey}&keyword=${teamName}&localStartDateTime=${gameDate}T00:00:00,${gameDate}T23:59:59&`
+
+const ticketmasterUrl = proxyUrl + url;
 // const gameDate = document.getElementById('').value;
 // const teamName = document.getElementById('').value;
 
@@ -94,7 +97,7 @@ async function nearbySearch() {
     const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary(
         "places",
       );
-      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+      
       // Restrict within the map viewport.
       let center = new google.maps.LatLng(lat, lng);
       const request = {
