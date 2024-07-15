@@ -74,12 +74,6 @@ function storeVenueDetails(venue) {
   localStorage.setItem("venue", JSON.stringify(venue));
 }
 
-// Get Latitude and Longitude of venue
-function getVenueCoordinates() {
-  console.log("inside");
-  const { longitude, latitude } = JSON.parse(localStorage.getItem("venue"));
-  return { longitude, latitude };
-}
 // functions, event listeners, etc. to run on page load
 getVenueApi();
 
