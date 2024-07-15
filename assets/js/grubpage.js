@@ -78,7 +78,6 @@ var lng = -118.2388;
 let map;
 
 async function initMap() {
-    const { Map, InfoWindow } = await google.maps.importLibrary("maps");
     //let center = new google.map.LatLng(lat, lng);
 
     map = new Map(document.getElementById('map'), {
