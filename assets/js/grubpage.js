@@ -102,7 +102,7 @@ async function nearbySearch() {
       let center = new google.maps.LatLng(lat, lng);
       const request = {
         // required parameters
-        fields: ["displayName", "location", "photos", "formattedAddress", "rating"],
+        fields: ["displayName", "location", "photos", "formattedAddress", "rating", "websiteURI"],
         locationRestriction: {
           center: center,
           radius: 500,
