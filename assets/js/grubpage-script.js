@@ -38,7 +38,7 @@ function renderRestaurantCard(){
 
 }
 
-
+//remove this later, testing purposes
 async function temp(){
     let places = await nearbySearch();
     console.log(places);
