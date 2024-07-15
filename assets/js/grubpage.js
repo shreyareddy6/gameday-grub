@@ -100,42 +100,21 @@ async function nearbySearch() {
       let center = new google.maps.LatLng(lat, lng);
       const request = {
         // required parameters
-        fields: ["displayName", "location", "businessStatus"],
+        fields: ["displayName", "location", "photos", "formattedAddress", "rating"],
         locationRestriction: {
           center: center,
           radius: 500,
         },
         // optional parameters
         includedPrimaryTypes: ["restaurant"],
-        maxResultCount: 5,
+        maxResultCount: 6,
         rankPreference: SearchNearbyRankPreference.POPULARITY,
         language: "en-US",
         region: "us",
       };
-      //@ts-ignore
+      
       const { places } = await Place.searchNearby(request);
-    
-      if (places.length) {
-        console.log(places);
-    
-        const { LatLngBounds } = await google.maps.importLibrary("core");
-        const bounds = new LatLngBounds();
-    
-        // Loop through and get all the results.
-        places.forEach((place) => {
-          const markerView = new AdvancedMarkerElement({
-            map,
-            position: place.location,
-            title: place.displayName,
-          });
-    
-          bounds.extend(place.location);
-          console.log(place);
-        });
-        map.fitBounds(bounds);
-      } else {
-        console.log("No results");
-      }
+      console.log(places);
     }
     
     initMap();
