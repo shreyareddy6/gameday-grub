@@ -1,0 +1,5 @@
+/* back button styling */
+.back-btn:hover {
+    background-color: skyblue;
+    color: aliceblue;
+}
