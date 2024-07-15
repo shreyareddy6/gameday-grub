@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Past Events</title>
+  </head>
+  <body>
+    <h1>Past Events</h1>
+    <div id="events"></div>
+
+    <script>
+      const apiKey = "yGPLSRwLKzHAgAdFANWvvUHIwVbZm8o3";
+      const keyword = "baseball";
+      const city = "Los Angeles";
+
+      const today = new Date();
+      const startDateTime =
+        new Date(today.setHours(0, 0, 0, 0)).toISOString().split(".")[0] + "Z"; // Start of today
+      const endDateTime =
+        new Date(today.setHours(23, 59, 59, 999)).toISOString().split(".")[0] +
+        "Z"; // End of today
+
+      console.log(endDateTime);
+      const proxyUrl = "https://floating-headland-95050.herokuapp.com/";
+      const apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=${apiKey}&keyword=${keyword}&startDateTime=${startDateTime}&endDateTime=${endDateTime}`;
+
+      const url = proxyUrl + apiUrl;
+
+      //   fetch(url)
+      //     .then((response) => response.json())
+      //     .then((data) => {
+      //       console.log(data);
+      //       // Handle the response data
+      //     })
+      //     .catch((error) => {
+      //       console.error("Error:", error);
+      //     });
+
+      //   console.log(url);
+
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          console.log(data._embedded.events[0]._embedded.venues[0].city.name);
+          const eventsContainer = document.getElementById("events");
+          if (data._embedded && data._embedded.events) {
+            console.log(data._embedded.events.length);
+            for (let i = 0; i < data._embedded.events.length; i++) {
+              console.log(
+                data._embedded.events[i]._embedded.venues[0].city.name
+              );
+            }
+            data._embedded.events.forEach((event) => {
+              const eventElement = document.createElement("div");
+              eventElement.innerHTML = `
+                              <h2>${event.name}</h2>
+                              <p>${event.dates.start.localDate}</p>
+                              <p>${event.dates.start.localTime}</p>
+                          `;
+              eventsContainer.appendChild(eventElement);
+            });
+          } else {
+            eventsContainer.innerHTML = "<p>No past events found.</p>";
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    </script>
+  </body>
+</html>
