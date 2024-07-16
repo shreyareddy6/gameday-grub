@@ -10,17 +10,21 @@
 
 <body>
     <!-- Header -->
-    <header class= "flex justify-end">
-        <nav>
-            <a href="./index.html"><button class="bg-gray-400 m-4 p-2.5 px-8 rounded-lg back-btn">Back</button></a>
+    <header>
+        <nav class="flex flex-row justify-between">
+            <img src="./assets/images/gameday-icon.png" alt="gameday grub logo" class="logo">
+            <a href="./index.html" class="pt-4 pr-6"><button
+                    class="bg-orange-400 m-4 p-2.5 px-8 rounded-lg back-btn">Back</button></a>
         </nav>
     </header>
-    <!-- Background splash -->
+    <!-- Venue Container -->
     <section>
         <div id="event-container" class="flex flex-col"></div>
+        <h3 class="mt-10 text-center text-xl italic text-orange-300 font-semibold">Find Nearby Grub Below!</h3>
     </section>
     <!-- Restuarant cards -->
     <!--Cards go here -->
+
 
     <div class="card pb-11 text-center font-bold bg-white p-14 m-8 overflow-hidden gap-5 grid lg:grid-cols-3" id="card">
       <!-- 
@@ -48,155 +52,185 @@
                 </svg>
               </div>
               <span class="ml-2 text-gray-600">4.0</span>
+
             </div>
-            <a href="https://restaurant-website.com" class="block mt-4 text-indigo-500 hover:underline">Visit Website</a>
-          </div>
         </div>
 
-        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-          <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x200" alt="Restaurant Image">
-          <div class="p-6">
-            <h2 class="text-lg font-bold text-gray-900">Restaurant Name</h2>
-            <p class="mt-1 text-gray-600">123 Main Street, Anytown, USA</p>
-            <div class="mt-4 flex items-center">
-              <div class="flex">
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-              </div>
-              <span class="ml-2 text-gray-600">4.0</span>
+        <div class="max-w-md mx-auto bg-white border-2 border-orange-400 rounded-xl shadow-md overflow-hidden">
+            <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x200" alt="Restaurant Image">
+            <div class="p-6">
+                <h2 class="text-lg font-bold text-gray-900">Restaurant Name</h2>
+                <p class="mt-1 text-gray-600">123 Main Street, Anytown, USA</p>
+                <div class="mt-4 flex items-center">
+                    <div class="flex">
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                    </div>
+                    <span class="ml-2 text-gray-600">4.0</span>
+                </div>
+                <a href="https://restaurant-website.com" class="block mt-4 text-indigo-500 hover:underline">Visit
+                    Website</a>
             </div>
-            <a href="https://restaurant-website.com" class="block mt-4 text-indigo-500 hover:underline">Visit Website</a>
-          </div>
         </div>
 
-        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-          <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x200" alt="Restaurant Image">
-          <div class="p-6">
-            <h2 class="text-lg font-bold text-gray-900">Restaurant Name</h2>
-            <p class="mt-1 text-gray-600">123 Main Street, Anytown, USA</p>
-            <div class="mt-4 flex items-center">
-              <div class="flex">
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-              </div>
-              <span class="ml-2 text-gray-600">4.0</span>
+        <div class="max-w-md mx-auto bg-white border-2 border-orange-400 rounded-xl shadow-md overflow-hidden">
+            <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x200" alt="Restaurant Image">
+            <div class="p-6">
+                <h2 class="text-lg font-bold text-gray-900">Restaurant Name</h2>
+                <p class="mt-1 text-gray-600">123 Main Street, Anytown, USA</p>
+                <div class="mt-4 flex items-center">
+                    <div class="flex">
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                    </div>
+                    <span class="ml-2 text-gray-600">4.0</span>
+                </div>
+                <a href="https://restaurant-website.com" class="block mt-4 text-indigo-500 hover:underline">Visit
+                    Website</a>
             </div>
-            <a href="https://restaurant-website.com" class="block mt-4 text-indigo-500 hover:underline">Visit Website</a>
-          </div>
         </div>
 
-        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-          <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x200" alt="Restaurant Image">
-          <div class="p-6">
-            <h2 class="text-lg font-bold text-gray-900">Restaurant Name</h2>
-            <p class="mt-1 text-gray-600">123 Main Street, Anytown, USA</p>
-            <div class="mt-4 flex items-center">
-              <div class="flex">
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-              </div>
-              <span class="ml-2 text-gray-600">4.0</span>
+        <div class="max-w-md mx-auto bg-white border-2 border-orange-400 rounded-xl shadow-md overflow-hidden">
+            <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x200" alt="Restaurant Image">
+            <div class="p-6">
+                <h2 class="text-lg font-bold text-gray-900">Restaurant Name</h2>
+                <p class="mt-1 text-gray-600">123 Main Street, Anytown, USA</p>
+                <div class="mt-4 flex items-center">
+                    <div class="flex">
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                    </div>
+                    <span class="ml-2 text-gray-600">4.0</span>
+                </div>
+                <a href="https://restaurant-website.com" class="block mt-4 text-indigo-500 hover:underline">Visit
+                    Website</a>
             </div>
-            <a href="https://restaurant-website.com" class="block mt-4 text-indigo-500 hover:underline">Visit Website</a>
-          </div>
         </div>
 
-        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-          <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x200" alt="Restaurant Image">
-          <div class="p-6">
-            <h2 class="text-lg font-bold text-gray-900">Restaurant Name</h2>
-            <p class="mt-1 text-gray-600">123 Main Street, Anytown, USA</p>
-            <div class="mt-4 flex items-center">
-              <div class="flex">
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-              </div>
-              <span class="ml-2 text-gray-600">4.0</span>
+        <div class="max-w-md mx-auto bg-white border-2 border-orange-400 rounded-xl shadow-md overflow-hidden">
+            <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x200" alt="Restaurant Image">
+            <div class="p-6">
+                <h2 class="text-lg font-bold text-gray-900">Restaurant Name</h2>
+                <p class="mt-1 text-gray-600">123 Main Street, Anytown, USA</p>
+                <div class="mt-4 flex items-center">
+                    <div class="flex">
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                    </div>
+                    <span class="ml-2 text-gray-600">4.0</span>
+                </div>
+                <a href="https://restaurant-website.com" class="block mt-4 text-indigo-500 hover:underline">Visit
+                    Website</a>
             </div>
-            <a href="https://restaurant-website.com" class="block mt-4 text-indigo-500 hover:underline">Visit Website</a>
-          </div>
         </div>
 
-        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-          <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x200" alt="Restaurant Image">
-          <div class="p-6">
-            <h2 class="text-lg font-bold text-gray-900">Restaurant Name</h2>
-            <p class="mt-1 text-gray-600">123 Main Street, Anytown, USA</p>
-            <div class="mt-4 flex items-center">
-              <div class="flex">
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-                <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
-                </svg>
-              </div>
-              <span class="ml-2 text-gray-600">4.0</span>
+        <div class="max-w-md mx-auto bg-white border-2 border-orange-400 rounded-xl shadow-md overflow-hidden">
+            <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x200" alt="Restaurant Image">
+            <div class="p-6">
+                <h2 class="text-lg font-bold text-gray-900">Restaurant Name</h2>
+                <p class="mt-1 text-gray-600">123 Main Street, Anytown, USA</p>
+                <div class="mt-4 flex items-center">
+                    <div class="flex">
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                        <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.152 3.53a1 1 0 00.95.69h3.688c.969 0 1.371 1.24.588 1.81l-2.978 2.166a1 1 0 00-.364 1.118l1.152 3.53c.3.921-.755 1.688-1.538 1.118l-2.978-2.166a1 1 0 00-1.175 0l-2.978 2.166c-.783.57-1.838-.197-1.538-1.118l1.152-3.53a1 1 0 00-.364-1.118L2.7 8.957c-.783-.57-.38-1.81.588-1.81h3.688a1 1 0 00.95-.69l1.152-3.53z" />
+                        </svg>
+                    </div>
+                    <span class="ml-2 text-gray-600">4.0</span>
+                </div>
+                <a href="https://restaurant-website.com" class="block mt-4 text-indigo-500 hover:underline">Visit
+                    Website</a>
             </div>
-            <a href="https://restaurant-website.com" class="block mt-4 text-indigo-500 hover:underline">Visit Website</a>
-          </div>
         </div>
+
 -->
     <section>
         <div id="grubContianer"></div>
@@ -217,6 +251,6 @@ crossorigin="anonymous"></script>
 <!-- <script src="./assets/js/grubpage.js"></script> -->
 <script src="./assets/js/grubpage.js"></script>
 <script src="./assets/js/grubpage-script.js"></script>
-</body>
+
 
 </html>
