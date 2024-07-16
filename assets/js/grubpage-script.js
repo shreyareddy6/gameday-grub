@@ -58,30 +58,68 @@ async function nearbySearch() {
 }
 
 async function renderRestaurantCard() {
-  let places = await nearbySearch();
-  if (places) {
-    for (let i = 0; i < places.length; i++) {
-      const temp = places[i];
-      console.log(temp);
+  let places = await nearbySearch()
 
-      const div1 = document.createElement("div");
-      div1.classList.add();
+  for (let i = 0; i < places.length; i++) {
+    const temp = places[i];
+    const restaurant = temp.Eg.photos[0].name;
+    const test = restaurant.split("photos/")
+    const photoURL = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&maxheight=200&photo_reference=${test[1]}&key=AIzaSyAmPbsK8vlRNrUfQKgY9QM-yI-WZanhKBY`
 
-      const div2 = document.createElement("div");
-      div2.classList.add();
+    console.log(photoURL);
+    console.log(test);
 
-      const img = document.createElement("img");
-      img.src = temp.Eg.photos[0].authorAttributions[0].photoURI;
+    console.log(temp.Eg.photos[0].name);
 
-      const span = document.createElement("span");
-      span.textcontet = temp.Eg.displayName;
+    console.log(temp);
 
-      card.append(div1);
-      div1.appendChild(img);
-      div1.appendChild(div2);
+    const div1 = document.createElement('div');
+    div1.classList.add("max-w-md", "mx-auto", "bg-white", "rounded-xl", "shadow-md", "overflow-hidden", "border-2", "border-orange-400");
 
-      div2.appendChild(span);
-    }
+    const img = document.createElement('img');
+    img.classList.add("w-full", "h-48", "object-cover");
+    img.setAttribute('src', photoURL);
+
+    const div2 = document.createElement('div');
+    div2.classList.add("p-6");
+
+    const h = document.createElement('h2');
+    h.classList.add('text-lg', 'font-bold', 'text-gray-900');
+    h.textContent = temp.Eg.displayName;
+
+    const p = document.createElement('p');
+    p.classList.add('mt-1', 'text-gray-600')
+    p.textContent = temp.Eg.formattedAddress;
+
+    const div3 = document.createElement('div');
+    div3.classList.add('mt-4', 'flex', 'items-center');
+
+    const div4 = document.createElement('div');
+    div4.classList.add('flex')
+
+    const svg = document.createElement('svg');
+    svg.classList.add('w-5', 'h-5', 'text-yellow-500');
+
+    const rating = document.createElement('p');
+    rating.classList.add('mt-1', 'text-gray-600');
+    rating.textContent = temp.Eg.rating;
+
+    //if (temp.Eg.websiteURI !== null) {
+      const a = document.createElement('a');
+      a.classList.add('block', 'mt-4', 'text-indigo-500', 'hover:underline');
+      a.textContent = temp.Eg.websiteURI;
+    //}
+
+    card.append(div1);
+    div1.appendChild(img);
+    div1.appendChild(div2);
+    div2.appendChild(h);
+    div2.appendChild(p);
+    div2.appendChild(div3);
+    div3.appendChild(div4);
+    div3.appendChild(a);
+    div4.appendChild(svg);
+    div4.appendChild(rating)
   }
 }
 
