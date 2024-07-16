@@ -1,9 +1,18 @@
+/* Color Theme */
+:root {
+  --eletric-blue: #1d87d1;
+  --bright-orange: #fdba74;
+  --vibrant-green: #81ad7a;
+}
+
 /* Global Styles */
 html,
 body {
   height: 100%;
   scroll-behavior: smooth;
+  background-color: var(--eletric-blue);
 }
+
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
@@ -13,7 +22,26 @@ body {
 }
 
 /* back button styling */
+.back-btn {
+  color: white;
+  border: solid white 2px;
+}
+
 .back-btn:hover {
-  background-color: skyblue;
+  background-color: var(--vibrant-green);
   color: aliceblue;
+}
+
+/* logo in header */
+.logo {
+  max-width: 7%;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+}
+
+/* venue container stlying */
+.venue-color {
+  background-color: var(--vibrant-green);
+  background-image: url(../images/gameday-texture.png);
+  object-fit: contain;
 }
