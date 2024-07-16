@@ -45,3 +45,8 @@ body {
   background-image: url(../images/gameday-texture.png);
   object-fit: contain;
 }
+
+/* 404 venue container */
+.venue {
+  background-color: var(--vibrant-green);
+}
