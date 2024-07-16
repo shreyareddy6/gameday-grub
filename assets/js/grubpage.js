@@ -14,7 +14,7 @@ const ticketmasterUrl = proxyUrl + url;
 /* TICKETMASTER API BELOW 
  -------------------------- */
 
-// this fetches the gameday venue data from the api
+// function to fetch the gameday venue data from the api
 function getVenueApi() {
   fetch(ticketmasterUrl)
     .then(function (response) {
@@ -30,19 +30,17 @@ function getVenueApi() {
     .catch((err) => console.error(err));
 }
 
-// this puts the selected game info on the page
+// function to put the selected game info on the page
 function renderEventCard(venueData) {
+
   // pull in desired event and venue data from api
   const eventName = venueData._embedded.events[0].name;
   const venueName = venueData._embedded.events[0]._embedded.venues[0].name;
   const eventDate = venueData._embedded.events[0].dates.start.dateTime;
-  const venueAddress =
-    venueData._embedded.events[0]._embedded.venues[0].address.line1;
+  const venueAddress = venueData._embedded.events[0]._embedded.venues[0].address.line1;
   const venueCity = venueData._embedded.events[0]._embedded.venues[0].city.name;
-  const venueState =
-    venueData._embedded.events[0]._embedded.venues[0].state.stateCode;
-  const venueLocation =
-    venueData._embedded.events[0]._embedded.venues[0].location; // gives long and lat values. needs to be set to localStorage
+  const venueState = venueData._embedded.events[0]._embedded.venues[0].state.stateCode;
+  const venueLocation = venueData._embedded.events[0]._embedded.venues[0].location; // gives long and lat values. needs to be set to localStorage
 
   // create elements to render event info to
   const nameEL = document.createElement("h1");
@@ -63,56 +61,21 @@ function renderEventCard(venueData) {
   storeVenueDetails(venueLocation);
 }
 
-// set the webpage title to selected team name
-function setPageTitle(venueName) {
-  const pageTitle = document.getElementById("team-title");
-  pageTitle.textContent = venueName + " Nearby Grub | GameDay Grub";
-}
-
-// Store the venue details - Latitude and Longitude
+// function to store the venue details - Latitude and Longitude
 function storeVenueDetails(venue) {
   localStorage.setItem("venue", JSON.stringify(venue));
 }
 
+// function to set the webpage title to selected team name
+function setPageTitle(venueName) {
+
+    const pageTitle = document.getElementById('team-title');
+    pageTitle.textContent = venueName + ' Nearby Grub | GameDay Grub'
+}
+
 // functions, event listeners, etc. to run on page load
-getVenueApi();
-
-/* GOOGLE MAPS API BELOW
--------------------------- */
-
-// var lat = 34.0658;
-// var lng = -118.2388;
-let map;
-
-
-
-//var center = new google.maps.LatLng(-30.2965590, 153.1152650);
-async function nearbySearch() {
-    const { Place, SearchNearbyRankPreference } = await google.maps.importLibrary(
-        "places",
-      );
-      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-      // Restrict within the map viewport.
-      let center = new google.maps.LatLng(lat, lng);
-      const request = {
-        // required parameters
-        fields: ["displayName", "location", "photos", "formattedAddress", "rating", "websiteURI"],
-        locationRestriction: {
-          center: center,
-          radius: 500,
-        },
-        // optional parameters
-        includedPrimaryTypes: ["restaurant"],
-        maxResultCount: 6,
-        rankPreference: SearchNearbyRankPreference.POPULARITY,
-        language: "en-US",
-        region: "us",
-      };
-      
-      const { places } = await Place.searchNearby(request);
-      console.log(places);
-    }
+if (gameDate.value !== '' && teamName.value !== '') {
     
-    nearbySearch();
-    
+    getVenueApi();
 
+}

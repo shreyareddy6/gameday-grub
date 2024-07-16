@@ -1,208 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GameGrub</title>
+    <title>GameDay Grub</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- JQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <div class="header-content flex justify-between items-center m-4">
-        <h1 class="text-6xl font-bold drop-shadow-2xl">Gameday Grub</h1>
-        <a
-          href="#sports-categories"
-          class="py-2 px-4 border-white rounded shadow-lg"
-          >Explore</a
-        >
-      </div>
-      <h2>
-        <span class="animate-word">Eat,</span>
-        <span class="animate-word">Cheer,</span>
-        <span class="animate-word">Repeat!</span>
-      </h2>
+        <div class="header-content flex justify-between items-center m-4">
+            <h1 class="text-6xl font-bold drop-shadow-2xl">Gameday Grub</h1>
+            <a href="#sports-categories" class="py-2 px-4 border-white rounded shadow-lg">Explore</a>
+        </div>
+        <h2>
+            <span class="animate-word">Eat,</span>
+            <span class="animate-word">Cheer,</span>
+            <span class="animate-word">Repeat!</span>
+        </h2>
     </header>
 
-    <main
-      class="container flex-shrink-0 mx-auto justify-center"
-      id="sports-categories"
-    >
-      <!-- Sports Categories -->
-      <div
-        class="category-cards flex flex-wrap space-x-4 space-y-4 justify-center"
-      >
-        <!-- card-1 -->
-        <div class="sport-card basis-1/4 shadow-lg">
-          <div class="img flex flex-col justify-center relative">
-            <img
-              src="https://www.api-football.com/public/img/news/min-football.png"
-              alt="football"
-            />
-            <button onclick="openModal('formModal','Football')">
-              <h3
-                class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white"
-              >
-                Football
-              </h3>
-            </button>
-          </div>
+    <main class="container flex-shrink-0 mx-auto justify-center" id="sports-categories">
+        <!-- Sports Categories -->
+        <div class="category-cards flex flex-wrap space-x-4 space-y-4 justify-center">
+            <!-- card-1 -->
+            <div class="sport-card basis-1/4 shadow-lg">
+                <div class="img flex flex-col justify-center relative">
+                    <img src="https://www.api-football.com/public/img/news/min-football.png" alt="football" />
+                    <button onclick="openModal('formModal','MLS')">
+                        <h3
+                            class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
+                            MLS
+                        </h3>
+                    </button>
+                </div>
+            </div>
+            <!-- card-2 -->
+            <div class="sport-card basis-1/4 shadow-lg">
+                <div class="img flex flex-col justify-center relative">
+                    <img src="https://www.api-football.com/public/img/news/min-nba.png" alt="nba" />
+                    <button onclick="openModal('formModal','NBA')">
+                        <h3
+                            class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
+                            NBA
+                        </h3>
+                    </button>
+                </div>
+            </div>
+            <!-- card-3 -->
+            <div class="sport-card basis-1/4 shadow-lg">
+                <div class="img flex flex-col justify-center space-x-4 relative">
+                    <img src="https://www.api-football.com/public/img/news/min-baseball.png" alt="baseball" />
+                    <button onclick="openModal('formModal','MLB')">
+                        <h3
+                            class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
+                            MLB
+                        </h3>
+                    </button>
+                </div>
+            </div>
+            <!-- card-4 -->
+            <div class="sport-card basis-1/4 shadow-lg">
+                <div class="img flex flex-col justify-center relative">
+                    <img src="https://www.api-football.com/public/img/news/min-football.png" alt="football" />
+                    <button onclick="openModal('formModal','MLS')">
+                        <h3
+                            class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
+                            MLS
+                        </h3>
+                    </button>
+                </div>
+            </div>
+            <!-- card-5 -->
+            <div class="sport-card basis-1/4 shadow-lg">
+                <div class="img flex flex-col justify-center relative">
+                    <img src="https://www.api-football.com/public/img/news/min-nba.png" alt="nba" />
+                    <button onclick="openModal('formModal','WNBA')">
+                        <h3
+                            class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
+                            WNBA
+                        </h3>
+                    </button>
+                </div>
+            </div>
+            <!-- card-6 -->
+            <div class="sport-card basis-1/4 shadow-lg">
+                <div class="img flex flex-col justify-center relative">
+                    <img src="https://www.api-football.com/public/img/news/min-hockey.png" alt="hockey" />
+                    <button onclick="openModal('formModal','NHL')">
+                        <h3
+                            class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
+                            NHL
+                        </h3>
+                    </button>
+                </div>
+            </div>
         </div>
-        <!-- card-2 -->
-        <div class="sport-card basis-1/4 shadow-lg">
-          <div class="img flex flex-col justify-center relative">
-            <img
-              src="https://www.api-football.com/public/img/news/min-nba.png"
-              alt="nba"
-            />
-            <button onclick="openModal('formModal','NBA')">
-              <h3
-                class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white"
-              >
-                NBA
-              </h3>
-            </button>
-          </div>
-        </div>
-        <!-- card-3 -->
-        <div class="sport-card basis-1/4 shadow-lg">
-          <div class="img flex flex-col justify-center space-x-4 relative">
-            <img
-              src="https://www.api-football.com/public/img/news/min-baseball.png"
-              alt="baseball"
-            />
-            <button onclick="openModal('formModal','Baseball')">
-              <h3
-                class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white"
-              >
-                Baseball
-              </h3>
-            </button>
-          </div>
-        </div>
-        <!-- card-4 -->
-        <div class="sport-card basis-1/4 shadow-lg">
-          <div class="img flex flex-col justify-center relative">
-            <img
-              src="https://www.api-football.com/public/img/news/min-football.png"
-              alt="football"
-            />
-            <button onclick="openModal('formModal','Soccer')">
-              <h3
-                class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white"
-              >
-                Soccer
-              </h3>
-            </button>
-          </div>
-        </div>
-        <!-- card-5 -->
-        <div class="sport-card basis-1/4 shadow-lg">
-          <div class="img flex flex-col justify-center relative">
-            <img
-              src="https://www.api-football.com/public/img/news/min-nba.png"
-              alt="nba"
-            />
-            <button onclick="openModal('formModal','WBNA')">
-              <h3
-                class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white"
-              >
-                WNBA
-              </h3>
-            </button>
-          </div>
-        </div>
-        <!-- card-6 -->
-        <div class="sport-card basis-1/4 shadow-lg">
-          <div class="img flex flex-col justify-center relative">
-            <img
-              src="https://www.api-football.com/public/img/news/min-hockey.png"
-              alt="hockey"
-            />
-            <button onclick="openModal('formModal','Hockey')">
-              <h3
-                class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white"
-              >
-                Hockey
-              </h3>
-            </button>
-          </div>
-        </div>
-      </div>
     </main>
     <!-- Modal -->
-    <div
-      id="formModal"
-      class="fixed inset-0 bg-gray-600 bg-opacity-50 h-full w-full hidden"
-    >
-      <div
-        class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white"
-      >
-        <div class="mt-3 text-center">
-          <h3
-            id="modalTitle"
-            class="text-lg leading-6 font-medium text-gray-900"
-          ></h3>
-          <div class="relative mt-2 px-7 py-3">
-            <input
-              type="text"
-              placeholder="Enter team..."
-              class="w-full px-4 py-2 border rounded-md"
-              id="search-input"
-            />
-            <button
-              class="absolute right-1 top-1/4 text-gray"
-              id="search-button"
-            >
-              <!-- search svg -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24px"
-                viewBox="0 -960 960 960"
-                width="24px"
-                fill="#5f6368"
-              >
-                <path
-                  d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="overflow-auto h-64" id="events"></div>
-          <div class="items-center px-4 py-3">
-            <button
-              id="closeButton"
-              class="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
-            >
-              Close
-            </button>
-          </div>
+    <div id="formModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 h-full w-full hidden">
+        <div class="relative top-20 mx-auto p-1 border w-96 shadow-lg rounded-md bg-white">
+            <div class="text-left">
+                <div class="items-right px-4 pt-3 pb-5 flex flex-row">
+                    <h3 id="modalTitle" class="basis-3/4 text-xl leading-6 font-extrabold text-gray-900"></h3>
+                    <button id="closeButton"
+                        class="basis-1/4 text-slate-400 text-base text-right font-medium rounded-md w-full shadow-sm hover:text-black focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        X
+                    </button>
+                </div>
+                <form id="user-inputs" class="relative px-7 py-1">
+                    <div class="">
+                        <label for="team" class="font-medium">Select Team:</label>
+                        <select name="team" id="team-dropdown" class="mt-0.5 w-full px-4 py-2 border rounded-md">
+                        </select>
+                    </div>
+                    <div class="py-3">
+                        <label for="date" class="font-medium">Select GameDay:</label>
+                        <input type="text" name="date" id="datepicker" class="mt-0.5 w-full px-4 py-2 border rounded-md" placeholder="Date">
+                    </div>
+                    <div class="items-center px-4 py-3">
+                        <button type="submit" id="submitButton"
+                            class="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                            Find Grub!
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
     <!-- footer -->
     <footer class="footer py-4 mt-12 bg-gray-800 text-white">
-      <div class="text-center">
-        <p>2024 sports events</p>
-      </div>
+        <div class="text-center">
+            <p>2024 sports events</p>
+        </div>
     </footer>
     <!-- Flowbite js -->
-    <script src="
-    https://cdn.jsdelivr.net/npm/dayjs@1.11.11/dayjs.min.js
-    "></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.11/dayjs.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
-            key: "AIzaSyAmPbsK8vlRNrUfQKgY9QM-yI-WZanhKBY",
-            v: "weekly",
-            // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
-            // Add other bootstrap parameters as needed, using camel case.
-        });</script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
     <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/grubpage.js"></script>
 </body>
 
 </html>
