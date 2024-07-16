@@ -108,6 +108,7 @@ async function renderRestaurantCard() {
       const a = document.createElement('a');
       a.classList.add('block', 'mt-4', 'text-indigo-500', 'hover:underline');
       a.textContent = temp.Eg.websiteURI;
+      a.href = temp.Eg.websiteURI;
     //}
 
     card.append(div1);
