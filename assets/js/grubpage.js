@@ -1,15 +1,14 @@
 // global variables
+const modalInputs = JSON.parse(localStorage.getItem('userInputs'));
+const teamName = modalInputs.team
+const gameDate = modalInputs.date
 const apiKey = "yGPLSRwLKzHAgAdFANWvvUHIwVbZm8o3";
-const teamName = "Dodgers"; // needs to be feed input from modal
-const gameDate = "2024-07-19"; // needs jquery datepicker input from modal
 const eventContainerEL = document.getElementById("event-container");
 const proxyUrl = "https://floating-headland-95050.herokuapp.com/";
 const url = `https://app.ticketmaster.com/discovery/v2/events?apikey=${apiKey}&keyword=${teamName}&localStartDateTime=${gameDate}T00:00:00,${gameDate}T23:59:59&`;
 const ticketmasterUrl = proxyUrl + url;
 
-// --------store venue details-----------------
-// const gameDate = document.getElementById('').value;
-// const teamName = document.getElementById('').value;
+
 
 /* TICKETMASTER API BELOW 
  -------------------------- */
@@ -51,7 +50,7 @@ function renderEventCard(venueData) {
   //insert event values to elements
   nameEL.textContent = eventName;
   venueEL.textContent = venueName;
-  dateEL.textContent = dayjs(eventDate).format("MMMM D, YYYY");
+  dateEL.textContent = dayjs(eventDate).format("dddd MMMM D, YYYY");
   addressEL.textContent = `${venueAddress}\n
     ${venueCity}, ${venueState}`; // should be a paragraph break after venueAddress
 

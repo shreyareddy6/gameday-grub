@@ -4,7 +4,6 @@ function openModal(modalId, sportName) {
         modal.style.display = "block";
         document.getElementById("modalTitle").textContent = `${sportName} Games`;
         modal.classList.remove("hidden");
-        console.log(modal);
 
         teamSelectMenu();
     }
@@ -12,9 +11,7 @@ function openModal(modalId, sportName) {
 }
 
 function closeModal(modalId) {
-    console.log("inside 1");
     const modal = document.getElementById(modalId);
-    console.log(modal);
     modal.classList.add("hidden");
     modal.style.display = "none";
 }
