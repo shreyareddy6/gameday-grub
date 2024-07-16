@@ -63,7 +63,7 @@ function renderEventCard(venueData) {
     "flex-col",
     "items-center",
     "justify-center",
-    "bg-stone-200",
+    "bg-gray-200",
     "p-6",
     "m-4",
     "rounded-lg",
