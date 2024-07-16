@@ -27,7 +27,7 @@ async function nearbySearch() {
   );
   const request = {
     // required parameters
-    fields: ["displayName", "location", "photos", "formattedAddress", "rating", "websiteURI"],
+    fields: ["displayName", "location", "photos", "formattedAddress", "rating", "websiteURI", ],
     locationRestriction: {
       center: center,
       radius: 500,
@@ -50,6 +50,8 @@ async function renderRestaurantCard() {
   for (let i = 0; i < places.length; i++) {
     const temp = places[i];
     console.log(temp);
+    
+    const url = temp.Eg.photos[1].authorAttributions[0].photoURI
 
     const div1 = document.createElement('div')
     div1.classList.add();
@@ -58,16 +60,19 @@ async function renderRestaurantCard() {
     div2.classList.add();
 
     const img = document.createElement('img')
-    img.src = temp.Eg.photos[0].authorAttributions[0].photoURI;
+    console.log(url)
+    img.setAttribute("src", `https:${url}`)
+    //img.src = temp.Eg.photos[1].authorAttributions[0].photoURI;
 
-    const span = document.createElement('span')
-    span.textcontet = temp.Eg.displayName;
+    const title = document.createElement('span')
+    title.textcontent = temp.Eg.displayName;
+    console.log(title)
 
     card.append(div1);
     div1.appendChild(img);
     div1.appendChild(div2);
     
-    div2.appendChild(span);
+    div2.appendChild(title);
 
   }
 }
