@@ -63,17 +63,19 @@ function renderEventCard(venueData) {
     "flex-col",
     "items-center",
     "justify-center",
-    "bg-gray-200",
-    "p-6",
+    "p-5",
     "m-4",
     "rounded-lg",
-    "shadow-lg"
+    "shadow-lg",
+    "border-4",
+    "border-orange-400",
+    "venue-color"
   );
   imageEL.classList.add("h-64", "mb-4", "object-contain", "rounded-md");
-  nameEL.classList.add("text-3xl", "font-extrabold", "text-black", "mb-2");
-  venueEL.classList.add("text-md", "text-black", "mb-2");
-  dateEL.classList.add("text-xl", "text-black", "mb-2");
-  addressEL.classList.add("text-sm", "text-black", "mb-4");
+  nameEL.classList.add("text-3xl", "font-extrabold", "text-white", "mb-2");
+  venueEL.classList.add("text-md", "text-white", "mb-2");
+  dateEL.classList.add("text-xl", "text-white", "mb-2");
+  addressEL.classList.add("text-sm", "text-white", "mb-4");
   // append elements and info to page
   eventContainerEL.append(imageEL, nameEL, dateEL, venueEL, addressEL);
 

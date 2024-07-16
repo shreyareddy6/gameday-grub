@@ -1,5 +1,5 @@
 /* Color Theme */
-root {
+:root {
   --eletric-blue: #1d87d1;
   --bright-orange: #fdba74;
   --vibrant-green: #81ad7a;
@@ -10,7 +10,7 @@ html,
 body {
   height: 100%;
   scroll-behavior: smooth;
-  background-color: #81ad7a;
+  background-color: var(--vibrant-green);
 }
 
 body {
@@ -47,7 +47,7 @@ header h2 {
   color: white;
   margin-top: 34rem;
   margin-left: 105rem;
-  color: #fdba74;
+  color: #ffa152;
   font-weight: bolder;
 }
 
