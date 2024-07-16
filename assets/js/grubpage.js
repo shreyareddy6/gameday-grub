@@ -22,7 +22,6 @@ function getVenueApi() {
 
       // call render & title functions
       renderEventCard(data);
-      setPageTitle(data._embedded.events[0]._embedded.venues[0].name);
     })
     .catch((err) => console.error(err));
 }
@@ -80,11 +79,31 @@ function renderEventCard(venueData) {
     eventContainerEL.append(imageEL, nameEL, dateEL, venueEL, addressEL);
 
     storeVenueDetails(venueLocation);
+    setPageTitle(data._embedded.events[0]._embedded.venues[0].name);
   } else {
     const noDataMsg = document.createElement("h1");
+    const noDataGif = document.createElement("img");
+    eventContainerEL.classList.add(
+      "flex",
+      "flex-col",
+      "items-center",
+      "justify-center",
+      "bg-gray-200",
+      "p-6",
+      "m-4",
+      "rounded-lg",
+      "shadow-lg"
+    );
     noDataMsg.textContent = "There's no Game scheduled on this date!";
-    eventContainerEL.append(noDataMsg);
+    noDataGif.setAttribute(
+      "src",
+      "https://media3.giphy.com/media/lVuHTg7bR5phxw8Z3N/giphy.webp?cid=ecf05e47wwbt0pqwglxs5du3ro4yqq7l9m037p1da48hqrjz&ep=v1_gifs_search&rid=giphy.webp&ct=g"
+    );
+    noDataMsg.classList.add("text-3xl", "font-extrabold", "text-black", "mb-2");
+    noDataGif.classList.add("h-96", "mb-4", "object-contain", "rounded-md");
+    eventContainerEL.append(noDataGif, noDataMsg);
     localStorage.removeItem("venue");
+    setPageTitle("404");
   }
 }
 
