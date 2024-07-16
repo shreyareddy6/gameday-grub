@@ -51,25 +51,20 @@ async function renderRestaurantCard() {
     const temp = places[i];
     console.log(temp);
     
-    const url = temp.Eg.photos[1].authorAttributions[0].photoURI
 
     const div1 = document.createElement('div')
-    div1.classList.add();
+    div1.classList.add('bg-gradient-to-r', 'from-indigo-500', 'rounded', 'shadow-lg', 'transition', 'ease-in-out', 'delay-150', 'bg-blue-500', 'hover:-translate-y-1', 'hover:scale-110', 'hover:bg-indigo-500', 'duration-30');
     
     const div2 = document.createElement('div')
-    div2.classList.add();
+    div2.classList.add('m-4');
 
-    const img = document.createElement('img')
-    console.log(url)
-    img.setAttribute("src", `https:${url}`)
-    //img.src = temp.Eg.photos[1].authorAttributions[0].photoURI;
 
-    const title = document.createElement('span')
+    const title = document.createElement('span');
+    //title.classList.add('');
     title.textcontent = temp.Eg.displayName;
     console.log(title)
 
     card.append(div1);
-    div1.appendChild(img);
     div1.appendChild(div2);
     
     div2.appendChild(title);
