@@ -82,30 +82,46 @@ function datepicker() {
         changeYear: true,
     });
 };
-
+ 
+// function to store the user input in localStorage
 function storeUserInputs() {
-    const formSubmit = document.getElementById('user-inputs')
-    const gameDate = document.getElementById('datepicker')
-    const teamName = document.getElementById('team-dropdown')
 
+    // retireve input values from modal
+    const formSubmit = document.getElementById('user-inputs');
+    const gameDate = document.getElementById('datepicker');
+    const teamName = document.getElementById('team-dropdown');
+    
+    // create the local storage
+    localStorage.getItem('userInputs');
+
+    // store the user inputs on modal submission
     formSubmit.addEventListener('submit', function (event) {
         event.preventDefault();
 
         if (gameDate.value === '' || teamName.value === '') {
             displayErrorMsg();
         } else {
-            let date = dayjs(gameDate.value).format('YYYY-MM-DD');
-            let team = teamName.value;
-            console.log(team, date); // convert to setItems inputsArray
-            // location.replace('./grubpage.html')
+            let userInput = {
+                team: teamName.value,
+                date: dayjs(gameDate.value).format('YYYY-MM-DD'),
+            }
+            
+            localStorage.setItem('userInputs', JSON.stringify(userInput)); 
+            location.replace('./grubpage.html')
         }
 
     });
 
 }
 
+// function to append error message to modal if submit clicked with no values
 function displayErrorMsg() {
-    // append error message to modal if submit clicked with no values
+    const errorContainer = document.getElementById('errorMsg');
+    const errorMsg = document.createElement('p');
+
+    errorMsg.textContent = 'Must select a team and game date';
+    errorMsg.className = 'font-center text-rose-700 text-sm italic font-thin pt-4 pl-9';
+    errorContainer.append(errorMsg);
 
 }
 
