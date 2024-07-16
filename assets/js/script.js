@@ -110,7 +110,7 @@ function teamSelectMenu() {
     "New York Mets",
     "New York Yankees",
     "Oakland Athletics",
-    "Philadelphia PHillies",
+    "Philadelphia Phillies",
     "Pittsburgh Pirates",
     "San Diego Padres",
     "San Francisco Giants",
