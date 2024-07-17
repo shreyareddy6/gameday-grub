@@ -10,7 +10,6 @@ html,
 body {
   height: 100%;
   scroll-behavior: smooth;
-  background-color: var(--eletric-blue);
 }
 
 body {
@@ -19,6 +18,13 @@ body {
   padding: 0;
   box-sizing: border-box;
   line-height: 1.5;
+}
+
+header {
+  background-color: var(--eletric-blue);
+  background-image: url(../images/gameday-texture.png);
+  object-fit: contain;
+  padding-bottom: 1rem;
 }
 
 /* back button styling */
@@ -41,12 +47,12 @@ body {
 
 /* venue container stlying */
 .venue-color {
-  background-color: var(--vibrant-green);
+  background-color: var(--eletric-blue);
   background-image: url(../images/gameday-texture.png);
   object-fit: contain;
 }
 
 /* 404 venue container */
 .venue {
-  background-color: var(--vibrant-green);
+  background-color: var(--eletric-blue);
 }
