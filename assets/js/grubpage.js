@@ -64,11 +64,11 @@ function renderEventCard(venueData) {
             "flex-col",
             "items-center",
             "justify-center",
-            "p-5",
-            "m-4",
-            "rounded-lg",
+            "px-5",
+            "pb-5",
+            "w-full",
             "shadow-lg",
-            "border-4",
+            "border-b-8",
             "border-orange-400",
             "venue-color"
         );
@@ -93,13 +93,13 @@ function renderEventCard(venueData) {
             "flex-col",
             "items-center",
             "justify-center",
-            "venue",
-            "border-4",
+            "px-5",
+            "pb-5",
+            "w-full",
+            "shadow-lg",
+            "border-b-8",
             "border-orange-400",
-            "p-6",
-            "m-4",
-            "rounded-lg",
-            "shadow-lg"
+            "venue",
         );
         noDataMsg.textContent = "404: There's No Game scheduled on this date!";
         noDataGif.setAttribute(

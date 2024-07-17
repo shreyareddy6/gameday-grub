@@ -45,7 +45,7 @@ async function nearbySearch() {
       },
       // optional parameters
       includedPrimaryTypes: ["restaurant"],
-      maxResultCount: 6,
+      maxResultCount: 8,
       rankPreference: SearchNearbyRankPreference.POPULARITY,
       language: "en-US",
       region: "us",
@@ -74,7 +74,7 @@ async function renderRestaurantCard() {
     console.log(temp);
 
     const div1 = document.createElement('div');
-    div1.classList.add("max-w-md", "mx-auto", "bg-white", "rounded-xl", "shadow-md", "overflow-hidden", "border-2", "border-orange-400");
+    div1.classList.add("w-96", "mx-auto", "bg-white", "rounded-xl", "shadow-md", "overflow-hidden", "border-2", "border-orange-300");
 
     const img = document.createElement('img');
     img.classList.add("w-full", "h-48", "object-cover");
@@ -84,31 +84,27 @@ async function renderRestaurantCard() {
     div2.classList.add("p-6");
 
     const h = document.createElement('h2');
-    h.classList.add('text-lg', 'font-bold', 'text-gray-900');
+    h.classList.add('text-lg', 'font-bold', 'text-black');
     h.textContent = temp.Eg.displayName;
 
     const p = document.createElement('p');
-    p.classList.add('mt-1', 'text-gray-600')
+    p.classList.add('mt-1', 'font-thin', 'text-black')
     p.textContent = temp.Eg.formattedAddress;
 
     const div3 = document.createElement('div');
-    div3.classList.add('mt-4', 'flex', 'items-center');
+    div3.classList.add('mt-4', 'flex', 'items-center', 'flex-col');
 
     const div4 = document.createElement('div');
     div4.classList.add('flex')
 
-    const svg = document.createElement('svg');
-    svg.classList.add('w-5', 'h-5', 'text-yellow-500');
-
     const rating = document.createElement('p');
-    rating.classList.add('mt-1', 'text-gray-600');
-    rating.textContent = temp.Eg.rating;
+    rating.classList.add('mt-1', 'text-black');
+    rating.textContent = `⭐️ Rating: ${temp.Eg.rating}`;
 
     //if (temp.Eg.websiteURI !== null) {
       const a = document.createElement('a');
       a.classList.add('block', 'mt-4', 'text-indigo-500', 'hover:underline');
       a.textContent = temp.Eg.websiteURI;
-      a.href = temp.Eg.websiteURI;
     //}
 
     card.append(div1);
@@ -119,7 +115,6 @@ async function renderRestaurantCard() {
     div2.appendChild(div3);
     div3.appendChild(div4);
     div3.appendChild(a);
-    div4.appendChild(svg);
     div4.appendChild(rating)
   }
 }
