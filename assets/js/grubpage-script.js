@@ -125,9 +125,8 @@ async function renderRestaurantCard() {
 }
 
 //remove this later, testing purposes
-async function temp() {
+async function renderRestaurantDetails() {
   let places = await nearbySearch();
   console.log(places);
   renderRestaurantCard();
 }
-temp();
