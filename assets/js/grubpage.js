@@ -80,7 +80,7 @@ function renderEventCard(venueData) {
         // append elements and info to page
         eventContainerEL.append(imageEL, nameEL, dateEL, venueEL, addressEL);
 
-
+        renderRestaurantDetails();
         storeVenueDetails(venueLocation);
         setPageTitle(venueName);
     } else {
