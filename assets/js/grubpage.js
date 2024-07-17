@@ -84,9 +84,11 @@ function renderEventCard(venueData) {
         storeVenueDetails(venueLocation);
         setPageTitle(venueName);
     } else {
+        const errContainer = document.getElementById('card-container')
         const tagline = document.getElementById('tagline')
         const noDataMsg = document.createElement("h1");
         const noDataGif = document.createElement("img");
+        // body.classList.add('bg-sky-400')
         tagline.innerHTML = ''
         eventContainerEL.classList.add(
             "flex",
@@ -101,14 +103,15 @@ function renderEventCard(venueData) {
             "border-orange-400",
             "venue",
         );
-        noDataMsg.textContent = "404: There's No Game scheduled on this date!";
+        noDataMsg.textContent = "404: No game scheduled, or the match has already started!";
         noDataGif.setAttribute(
             "src",
             "https://media3.giphy.com/media/lVuHTg7bR5phxw8Z3N/giphy.webp?cid=ecf05e47wwbt0pqwglxs5du3ro4yqq7l9m037p1da48hqrjz&ep=v1_gifs_search&rid=giphy.webp&ct=g"
         );
-        noDataMsg.classList.add("text-3xl", "font-extrabold", "text-black", "italic", "mb-2");
+        noDataMsg.classList.add("text-4xl", "font-bold", "text-black", "italic");
         noDataGif.classList.add("h-96", "mb-9", "object-contain", "rounded-md");
-        eventContainerEL.append(noDataGif, noDataMsg);
+        eventContainerEL.append(noDataGif);
+        errContainer.append(noDataMsg);
         localStorage.removeItem("venue");
         setPageTitle("404");
     }

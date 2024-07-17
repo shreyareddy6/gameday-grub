@@ -27,6 +27,7 @@ header {
   padding-bottom: 1rem;
 }
 
+
 /* back button styling */
 .back-btn {
   color: white;
@@ -55,4 +56,16 @@ header {
 /* 404 venue container */
 .venue {
   background-color: var(--eletric-blue);
+  background-image: url(../images/gameday-texture.png);
+  object-fit: contain;
+}
+
+footer {
+  position: relative;
+  bottom: -142px;
+}
+
+.foot-assist {
+  position: relative;
+  bottom: -142px;
 }
