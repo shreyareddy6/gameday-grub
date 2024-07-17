@@ -29,77 +29,77 @@
     <section class="bg-orange-400 mb-7 py-2 w-full"></section>
     <main class="container flex-shrink-0 mx-auto justify-center" id="sports-categories">
         <!-- Sports Categories -->
-        <div class="category-cards flex flex-wrap space-x-4 space-y-4 justify-center">
+        <div class="category-cards flex flex-wrap overflow-hidden gap-y-12 grid sm:grid-cols-3">
             <!-- card-1 -->
-            <div class="sport-card basis-1/4 shadow-lg">
-                <div class="img flex flex-col justify-center relative">
-                    <img src="https://www.api-football.com/public/img/news/min-football.png" alt="football" />
-                    <button onclick="openModal('formModal','MLS')">
+            <div class="sport-card basis-1/4">
+                <div class="img flex flex-col items-center relative">
+                    <img onclick="openModal('formModal','NFL')" src="./assets/images/NFL.png" alt="football" class="rounded-3xl shadow-lg bg-orange-300 hover:border-8 hover:border-green-500"/>
+                    <!-- <button onclick="openModal('formModal','NFL')">
                         <h3
                             class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
-                            MLS
+                            NFL
                         </h3>
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <!-- card-2 -->
-            <div class="sport-card basis-1/4 shadow-lg">
-                <div class="img flex flex-col justify-center relative">
-                    <img src="https://www.api-football.com/public/img/news/min-nba.png" alt="nba" />
-                    <button onclick="openModal('formModal','NBA')">
+            <div class="sport-card basis-1/4">
+                <div class="img flex flex-col items-center relative">
+                    <img onclick="openModal('formModal','NBA')" src="./assets/images/NBA.png" alt="nba" class="rounded-3xl shadow-lg bg-orange-300 hover:border-8 hover:border-green-500"/>
+                    <!-- <button onclick="openModal('formModal','NBA')">
                         <h3
                             class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
                             NBA
                         </h3>
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <!-- card-3 -->
-            <div class="sport-card basis-1/4 shadow-lg">
-                <div class="img flex flex-col justify-center space-x-4 relative">
-                    <img src="https://www.api-football.com/public/img/news/min-baseball.png" alt="baseball" />
-                    <button onclick="openModal('formModal','MLB')">
+            <div class="sport-card basis-1/4">
+                <div class="img flex flex-col items-center space-x-4 relative">
+                    <img onclick="openModal('formModal','MLB')" src="./assets/images/MLB.png" alt="baseball" class="rounded-3xl shadow-lg bg-orange-300 hover:border-8 hover:border-green-500"/>
+                    <!-- <button onclick="openModal('formModal','MLB')">
                         <h3
                             class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
                             MLB
                         </h3>
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <!-- card-4 -->
-            <div class="sport-card basis-1/4 shadow-lg">
-                <div class="img flex flex-col justify-center relative">
-                    <img src="https://www.api-football.com/public/img/news/min-football.png" alt="football" />
-                    <button onclick="openModal('formModal','MLS')">
+            <div class="sport-card basis-1/4">
+                <div class="img flex flex-col items-center relative">
+                    <img onclick="openModal('formModal','MLS')" src="./assets/images/MLS.png" alt="soccer" class="rounded-3xl shadow-lg bg-orange-300 hover:border-8 hover:border-green-500"/>
+                    <!-- <button onclick="openModal('formModal','MLS')">
                         <h3
                             class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
                             MLS
                         </h3>
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <!-- card-5 -->
-            <div class="sport-card basis-1/4 shadow-lg">
-                <div class="img flex flex-col justify-center relative">
-                    <img src="https://www.api-football.com/public/img/news/min-nba.png" alt="nba" />
-                    <button onclick="openModal('formModal','WNBA')">
+            <div class="sport-card basis-1/4">
+                <div class="img flex flex-col items-center relative">
+                    <img onclick="openModal('formModal','WNBA')" src="./assets/images/WNBA.png" alt="nba" class="rounded-3xl shadow-lg bg-orange-300 hover:border-8 hover:border-green-500"/>
+                    <!-- <button onclick="openModal('formModal','WNBA')">
                         <h3
                             class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
                             WNBA
                         </h3>
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <!-- card-6 -->
-            <div class="sport-card basis-1/4 shadow-lg">
-                <div class="img flex flex-col justify-center relative">
-                    <img src="https://www.api-football.com/public/img/news/min-hockey.png" alt="hockey" />
-                    <button onclick="openModal('formModal','NHL')">
+            <div class="sport-card basis-1/4">
+                <div class="img flex flex-col items-center relative">
+                    <img onclick="openModal('formModal','NHL')" src="./assets/images/NHL.png" alt="hockey" class="rounded-3xl shadow-lg bg-orange-300 hover:border-8 hover:border-green-500"/>
+                    <!-- <button onclick="openModal('formModal','NHL')">
                         <h3
                             class="type uppercase absolute bottom-0 left-1 transition ease-in-out delay-100 bg-cyan-400 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 duration-300 rounded leadin-5 py-1.5 px-2 text-base text-white">
                             NHL
                         </h3>
-                    </button>
+                    </button> -->
                 </div>
             </div>
         </div>

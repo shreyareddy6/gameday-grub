@@ -89,3 +89,10 @@ header h2 span {
   font-weight: bolder;
   color: #082f49;
 }
+
+/* sport cards */
+
+.img img {
+  height: 50%;
+  width: 50%;
+}
