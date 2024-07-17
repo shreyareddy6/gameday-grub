@@ -113,12 +113,6 @@ async function renderRestaurantCard() {
     rating.classList.add("mt-1", "text-black");
     rating.textContent = `⭐️ Rating: ${temp.Eg.rating}`;
 
-    //if (temp.Eg.websiteURI !== null) {
-    // const a = document.createElement('a');
-    // a.classList.add('block', 'mt-4', 'text-indigo-500', 'hover:underline');
-    // a.textContent = temp.Eg.websiteURI;
-    //}
-
     card.append(aTagCard);
     aTagCard.append(div1);
     div1.appendChild(img);
@@ -127,12 +121,10 @@ async function renderRestaurantCard() {
     div2.appendChild(p);
     div2.appendChild(div3);
     div3.appendChild(div4);
-    // div3.appendChild(a);
     div4.appendChild(rating);
   }
 }
 
-//remove this later, testing purposes
 async function renderRestaurantDetails() {
   let places = await nearbySearch();
   console.log(places);
